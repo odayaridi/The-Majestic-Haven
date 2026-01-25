@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.4 " prefWidth="866.4" spacing="10.0" stylesheets="@../CSS%20FILES/MyBookings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.the_majestic_haven_midterm.Controllers.MyBookingsController">
+    <children>
+        <VBox prefHeight="24.0" prefWidth="846.0">
+            <VBox.margin>
+                <Insets bottom="5.0" left="15.0" top="5.0" />
+            </VBox.margin>
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="My Bookings" wrappingWidth="210.93674278259277">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Text>
+                <Label prefHeight="18.0" prefWidth="140.0" text="CHECK YOUR BOOKINGS" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets left="15.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <Line endX="945.9064331054688" endY="11.6786470413208" startX="80.2136001586914" startY="11.67867374420166" stroke="WHITE" />
+      <HBox>
+         <children>
+              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="583.0">
+                  <children>
+                      <Button fx:id="refreshButton" alignment="CENTER" mnemonicParsing="false" onAction="#onClickRefreshButton" prefHeight="36.0" prefWidth="240.0" styleClass=".button" text="Refresh" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="180.0" />
+                     </VBox.margin>
+                  </Button>
+                      <TableView fx:id="clientTable" layoutX="74.0" layoutY="-8.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="572.0">
+                          <columns>
+                              <TableColumn fx:id="roomNumberColumn" maxWidth="135.19995880126953" minWidth="107.99996793270111" prefWidth="107.99996793270111" text="Room Number" />
+                              <TableColumn fx:id="roomName" maxWidth="162.4000015258789" minWidth="122.40003204345703" prefWidth="130.40003204345703" text="Room Name" />
+                              <TableColumn fx:id="rentStartDate" maxWidth="175.99993896484375" minWidth="109.5999755859375" prefWidth="120.79998779296875" text="Rental Start Date" />
+                              <TableColumn fx:id="rentEndDate" maxWidth="193.59994506835938" minWidth="113.5999755859375" prefWidth="113.5999755859375" text="Rental End Date" />
+                              <TableColumn fx:id="roomPrice" maxWidth="203.99996948242188" minWidth="98.39999389648438" prefWidth="98.39999389648438" text="Price" />
+                          </columns>
+                          <VBox.margin>
+                              <Insets left="10.0" top="20.0" />
+                          </VBox.margin>
+                      </TableView>
+                  </children>
+              </VBox>
+            <VBox alignment="CENTER" prefHeight="514.0" prefWidth="286.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="282.0" text="Extend Your Stay" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="userInput" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="246.0" promptText="Enter room number or room name" />
+                   <ComboBox fx:id="rentingTimeComboBox" onAction="#onChooseOptionCB" prefHeight="27.0" prefWidth="183.0" value="1 day">
+                       <items>
+                           <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="1 day" />
+                               <String fx:value="3 days" />
+                               <String fx:value="1 week" />
+                               <String fx:value="3 weeks" />
+                               <String fx:value="1 month" />
+                           </FXCollections>
+                       </items>
+                   </ComboBox>
+                  <Label fx:id="priceShow" prefHeight="27.0" prefWidth="148.0" text="Price: 0$" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+
+
+                   <Button mnemonicParsing="false" onMouseClicked="#onClickExtendRent" prefHeight="30.0" prefWidth="146.0" text="Extend Rent" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+    </children>
+</VBox>

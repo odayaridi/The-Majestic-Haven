@@ -1,0 +1,21 @@
+#parentPane{
+    -fx-background-color: #0052CC;
+}
+
+#refreshButton{
+    -fx-background-color: #1A237E;
+    -fx-cursor: hand;
+}
+
+#reportComboBox{
+    -fx-cursor: hand;
+}
+
+
+#xAxis{
+    -fx-text-fill: white;
+}
+
+#yAxis{
+    -fx-text-fill: white;
+}

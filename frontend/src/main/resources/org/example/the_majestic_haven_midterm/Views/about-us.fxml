@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.4" prefWidth="866.4" spacing="15.0" stylesheets="@../CSS%20FILES/AboutUs.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="60.0" prefWidth="846.0">
+         <VBox.margin>
+            <Insets left="20.0" top="5.0" />
+         </VBox.margin>
+         <children>
+            <Label prefHeight="28.0" prefWidth="182.0" text="About Us" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="222.0" text="YOUR SATISFACATION IS OUR PRIORITY" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Line endX="759.2929077148438" endY="-1.6569277048110962" startX="-100.0" stroke="WHITE" />
+      <VBox layoutX="30.0" layoutY="15.0" prefHeight="102.0" prefWidth="836.0">
+         <children>
+            <Label prefHeight="60.0" prefWidth="182.0" text="Introduction:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" prefHeight="98.0" prefWidth="692.0" text="Welcome to &quot;The Majestic Maven&quot;, the best hotel booking platform designed to make reserving your next stay simple and hassle-free. Whether you're planning a weekend getaway or a business trip, we make booking a hotel room quick, easy, and convenient." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox layoutX="40.0" layoutY="109.0" prefHeight="78.0" prefWidth="836.0">
+         <children>
+            <Label prefHeight="38.0" prefWidth="182.0" text="Mission target:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" prefHeight="45.0" prefWidth="692.0" text="Our mission is to provide travelers with an intuitive, reliable, and seamless booking experience, helping them find the perfect room at the best prices." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox layoutX="40.0" layoutY="236.0" prefHeight="189.0" prefWidth="836.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="182.0" text="Key Features:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" prefHeight="148.0" prefWidth="692.0" text="Our hotel booking application makes it easy for users to create an account and log in securely. Users can search for available rooms, view details, book their stay for multiple nights without needing separate reservations, and explore additional services. The app also allows users to delete accidental reservations. A secure payment way ensures safe transactions for confirmed bookings. Additionally, users can reach out for assistance by filling out a contact form in the dedicated support section. With a professional design and user-friendly interface, this system enhances efficiency in hotel management while offering a smooth experience for customers." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="30.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>

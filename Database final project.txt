@@ -1,0 +1,88 @@
+CREATE DATABASE the_majestic_haven;
+USE the_majestic_haven;
+
+
+CREATE TABLE Clients (
+    client_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Rooms (
+    room_id INT PRIMARY KEY AUTO_INCREMENT,
+    room_name VARCHAR(100) NOT NULL,
+    room_type VARCHAR(200) NOT NULL,
+    room_number VARCHAR(20) UNIQUE NOT NULL,
+    price_per_night DECIMAL(10,2) NOT NULL,
+    availability_status VARCHAR(100),
+    image VARCHAR(300)
+);
+
+
+INSERT INTO Rooms (room_name, room_type, room_number, price_per_night, availability_status, image)
+VALUES 
+('Alpha View Room', 'Single', '101A', 150.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Alpha View Room.png'),
+('Business Comfort', 'Double', '102B', 170.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Business Comfort.png'),
+('City View Room', 'Suite', '103C', 80.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/City View Room.png'),
+('Classic Comfort', 'Double', '104D', 90.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Classic Comfort.png'),
+('Coastal Retreat', 'Single', '105E', 120.50, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Coastal Retreat.png'),
+('Cozy Retreat', 'Suite', '106F', 85.50, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Cozy Retreat.png'),
+('Deluxe Bell', 'Double', '107G', 120.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Deluxe Bell.png'),
+('Elegant Stay', 'Single', '108H', 110.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Elegant Stay.png'),
+('Executive Comfort', 'Suite', '109I', 100.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Executive Comfort.png'),
+('Heritage Suite', 'Double', '110J', 10.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Heritage Suite.png'),
+('Luxury Suite', 'Single', '111K', 105.70, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Luxury Suite.png'),
+('Mountain Lodge', 'Suite', '112L', 140.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Mountain Lodge.png'),
+('Ocean Breeze', 'Double', '113M', 130.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Ocean Breeze.png'),
+('Penthouse Paradise', 'Single', '114N', 125.50, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Penthouse Paradise.png'),
+('Presidential Suite', 'Suite', '115O', 120.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Presidential Suite.png'),
+('Royal Suite', 'Double', '116P', 85.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Royal Suite.png'),
+('Serene Getaway', 'Single', '117Q', 110.30, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Serene Getaway.png'),
+('Skyline Penthouse', 'Suite', '118R', 85.50, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Skyline Penthouse.png'),
+('Sunset Escape', 'Double', '119S', 90.10, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Sunset Escape.png'),
+('Tranquil Oasis', 'Single', '120T', 140.00, 'Available', '/org/example/the_majestic_haven_midterm/Rooms_Images/Tranquil Oasis.png');
+
+
+
+CREATE TABLE Bookings (
+    booking_id INT PRIMARY KEY AUTO_INCREMENT,
+    client_id INT NOT NULL,
+    room_id INT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    total_price DECIMAL(10,2),
+    FOREIGN KEY (client_id) REFERENCES Clients(client_id) ON DELETE CASCADE,
+    FOREIGN KEY (room_id) REFERENCES Rooms(room_id) ON DELETE CASCADE
+);
+
+
+
+
+CREATE TABLE Reviews (
+    review_id INT PRIMARY KEY AUTO_INCREMENT,
+    client_id INT NOT NULL,
+    room_id INT NOT NULL,
+    review_text TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (client_id) REFERENCES Clients(client_id) ON DELETE CASCADE,
+    FOREIGN KEY (room_id) REFERENCES Rooms(room_id) ON DELETE CASCADE
+);
+
+CREATE TABLE contact (
+    contact_id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    subject_request VARCHAR(255),
+    message VARCHAR(255) NOT NULL,
+    FOREIGN KEY (client_id) REFERENCES Clients(client_id) ON DELETE CASCADE
+);
+
+
+
+
+
+

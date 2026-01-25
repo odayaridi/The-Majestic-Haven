@@ -1,0 +1,17 @@
+#parentPane{
+    -fx-background-color: #0052CC;
+}
+.userInput{
+    -fx-border-color: blue;
+    -fx-border-radius: 10;
+}
+
+#subjectComboBox{
+    -fx-background-color: white;
+    -fx-cursor: hand;
+}
+
+#sendButton{
+    -fx-background-color: #1A237E;
+    -fx-cursor: hand;
+}

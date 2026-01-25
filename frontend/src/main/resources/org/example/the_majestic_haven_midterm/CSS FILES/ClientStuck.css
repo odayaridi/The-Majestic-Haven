@@ -1,0 +1,8 @@
+#parentPane{
+    -fx-background-color : #0052CC;
+}
+
+.buttons{
+    -fx-background-color: #1A237E;
+    -fx-cursor: hand;
+}

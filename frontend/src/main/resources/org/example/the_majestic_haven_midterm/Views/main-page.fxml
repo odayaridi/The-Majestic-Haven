@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="MainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../CSS%20FILES/Mainpage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.the_majestic_haven_midterm.Controllers.MainPageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="leftSide" prefHeight="503.0" prefWidth="247.0">
+               <children>
+                  <ImageView fitHeight="173.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons_Images/MainImage.png" />
+                     </image></ImageView>
+                  <Label layoutX="22.0" layoutY="208.0" prefHeight="18.0" prefWidth="188.0" text="✔ Fast, Reliable &amp; Secure" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="240.0" prefHeight="22.0" prefWidth="202.0" text="✔ Easy Registration &amp; Login" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="22.0" layoutY="275.0" prefHeight="20.0" prefWidth="202.0" text="✔ Real-Time Booking Updates" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="registerPane" layoutX="251.0" layoutY="2.0" minHeight="-Infinity" prefHeight="500.0" prefWidth="450.0" visible="false">
+               <children>
+                  <Text fill="#1a237e" layoutX="43.0" layoutY="169.0" style="-fx-font-size: 25px;" text="Welcome to our Majestic Haven!" wrappingWidth="363.0" />
+
+                  <TextField fx:id="firstNameRegister" layoutX="124.0" layoutY="186.0" prefHeight="30.0" prefWidth="202.0" promptText="First Name" styleClass="userInput">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+                  <TextField fx:id="lastNameRegister" layoutX="124.0" layoutY="228.0" prefHeight="30.0" prefWidth="202.0" promptText="Last Name" styleClass="userInput" />
+                  <TextField fx:id="emailRegister" layoutX="124.0" layoutY="270.0" prefHeight="30.0" prefWidth="202.0" promptText="Email" style=": 10px;" styleClass="userInput" />
+                  <Label layoutX="242.0" layoutY="351.0" onMouseClicked="#havingAnAccountClick" prefHeight="18.0" prefWidth="168.0" text="Already have an account? Login" textFill="#1a237e" />
+                  <Button layoutX="124.0" layoutY="377.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#registerClick" prefHeight="28.0" prefWidth="74.0" styleClass="buttons" text="Register" textFill="WHITE" />
+                  <ImageView fitHeight="112.0" fitWidth="112.0" layoutX="169.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons_Images/square.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="passwordRegister" layoutX="123.0" layoutY="312.0" prefHeight="30.0" prefWidth="202.0" promptText="Password" styleClass="userInput" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="loginPane" layoutX="247.0" layoutY="2.0" prefHeight="500.0" prefWidth="458.0">
+               <children>
+                  <ImageView fitHeight="134.0" fitWidth="150.0" layoutX="147.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons_Images/lock.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#1a237e" layoutX="135.0" layoutY="194.0" text="Welcome Again!" wrappingWidth="188.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Text>
+                  <TextField fx:id="emailLogin" layoutX="128.0" layoutY="219.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="202.0" promptText="Email" styleClass="userInput" />
+                  <Button fx:id="loginButton" layoutX="128.0" layoutY="333.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginClick" prefHeight="28.0" prefWidth="74.4" styleClass="buttons" text="Login" textFill="WHITE" />
+                  <Label layoutX="206.0" layoutY="298.0" onMouseClicked="#notHavingAnAccountClick" prefHeight="18.0" prefWidth="175.0" styleClass=".label" text="Don't have an account, Sign Up!" textFill="#1a237e" />
+                  <PasswordField fx:id="passwordLogin" layoutX="128.0" layoutY="264.0" prefHeight="30.0" prefWidth="202.0" promptText="Password" styleClass="userInput" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

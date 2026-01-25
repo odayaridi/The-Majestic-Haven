@@ -1,0 +1,23 @@
+#MainPage{
+    -fx-background-color :  #2196F3;
+}
+
+#leftSide{
+    -fx-background-color :  #1A237E;
+}
+
+.userInput{
+    -fx-border-color: blue;
+    -fx-border-radius :10;
+}
+
+
+.label{
+    -fx-cursor: hand;
+}
+
+.buttons{
+    -fx-background-color:  #1A237E;
+    -fx-cursor: hand;
+}
+

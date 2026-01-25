@@ -1,0 +1,29 @@
+#holderRoomInfoPane{
+    -fx-background-color :#2196F3;
+}
+
+.buttons{
+    -fx-background-color:  #1A237E;
+    -fx-cursor: hand;
+}
+
+#cancelRentButton{
+    -fx-background-color:  red;
+    -fx-cursor: hand;
+}
+
+#rentingTimeComboBox{
+    -fx-background-color : white;
+    -fx-border-color: blue;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+
+#userInputFeedback{
+    -fx-border-color: #1A237E;
+    -fx-border-radius :10;
+}
+
+#feedbackButton{
+    -fx-cursor: hand;
+}

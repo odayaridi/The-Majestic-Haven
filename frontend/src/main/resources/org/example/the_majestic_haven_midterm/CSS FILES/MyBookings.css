@@ -1,0 +1,21 @@
+#parentPane{
+    -fx-background-color: #0052CC;
+}
+
+#userInput{
+    -fx-border-color: blue;
+    -fx-border-radius: 10;
+}
+
+
+#rentingTimeComboBox{
+    -fx-background-color : white;
+    -fx-border-color: blue;
+    -fx-border-radius: 10;
+    -fx-cursor: hand;
+}
+.button {
+    -fx-background-color: #1A237E;
+    -fx-cursor: hand;
+}
+
